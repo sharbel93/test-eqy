@@ -63,7 +63,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatGridListModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -94,7 +95,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatGridListModule
   ]
 })
 export class AppMaterialModule { }
