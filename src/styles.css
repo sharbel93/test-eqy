@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles-variables.scss";
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~bootstrap/dist/css/bootstrap-reboot.css';
+@import '~bootstrap/dist/css/bootstrap-grid.css';
 html, body {
   height: 100%;
   /*width: 1440px;*/
@@ -9,4 +12,5 @@ html, body {
   /*overflow-y: scroll;*/
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 

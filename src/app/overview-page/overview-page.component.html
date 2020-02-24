@@ -1,4 +1,167 @@
-<mat-grid-list cols="1" rowHeight="2:0.8">
-  <mat-grid-tile>1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-</mat-grid-list>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Analytics</h2>
+      <mat-card class="analytics_card">
+        <!--  <mat-card-header>-->
+        <div class="row">
+          <div class="col-md-7 _top_card_left">
+            <a mat-button>Today</a>
+            <a mat-button class="btn_active">Last 7 days</a>
+            <a mat-button>Last 30 days</a>
+            <a mat-button>Last 90 days</a>
+            <a mat-button>Custom</a>
+          </div>
+          <div class="col-md-5 ">
+            <div class="_wrap_side">
+              <div class="custom-select-1">
+                <select >
+                  <option>KES</option>
+                  <option>USD</option>
+                </select>
+              </div>
+              <div class="custom-select-2">
+                <select >
+                  <option>&#xf080; Total Volume</option>
+                  <option>&#xf080; Total Bonds</option>
+                </select>
+              </div>
+              <button mat-icon-button >
+                <mat-icon>vertical_align_bottom</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--  </mat-card-header>-->
+        <mat-card-content>
+          <div class="row _wrap_grap">
+            <div class="col-6">
+              <h2>KES 34,050.00 <small>Total Volume</small></h2>
+            </div>
+            <div class="col-6">
+              <button mat-button>
+                jun 2<span>&rarr;</span>jun 8 2018
+              </button>
+            </div>
+            <div class="col-md-12">
+              <div class="chart-container">
+                <canvas baseChart
+                        [datasets]="lineChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        [plugins]="lineChartPlugins"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 justify-content-start wrap_bottom_graph">
+              <div class="wrap_bottom_graph_left">
+                <h3>orders</h3>
+                <span>28</span>
+              </div>
+              <div class="wrap_bottom_graph_right">
+                <h3>Revenue</h3>
+                <span>KES 12,670.90</span>
+              </div>
+            </div>
+          </div>
+          <div class="row m-t">
+            <div class="col-6">
+            <span>Last updated 5 minutes ago</span>
+            </div>
+            <div class="col-6">
+              <a href="#">See all transactions <span>&rarr;</span></a>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row bottom_row">
+    <div class="col-md-12">
+      <h2>Settlement</h2>
+      <mat-card class="analytics_card">
+        <!--  <mat-card-header>-->
+        <div class="row">
+          <div class="col-md-7 _top_card_left">
+            <a mat-button>Today</a>
+            <a mat-button class="btn_active">Last 7 days</a>
+            <a mat-button>Last 30 days</a>
+            <a mat-button>Last 90 days</a>
+            <a mat-button>Custom</a>
+          </div>
+          <div class="col-md-5 ">
+            <div class="_wrap_side">
+              <div class="custom-select-1">
+                <select >
+                  <option>KES</option>
+                  <option>USD</option>
+                </select>
+              </div>
+              <button mat-icon-button >
+                <mat-icon>vertical_align_bottom</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--  </mat-card-header>-->
+        <mat-card-content>
+          <div class="row _wrap_grap">
+            <div class="col-6">
+              <h2>KES 560,987.00 <small>Total Available Balance</small></h2>
+            </div>
+            <div class="col-6">
+              <button mat-button>
+                jun 2<span>&rarr;</span>ju1 1 2018
+              </button>
+            </div>
+            <div class="col-md-12">
+              <div class="chart-container">
+                <canvas baseChart
+                        [datasets]="lineChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        [plugins]="lineChartPlugins"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 justify-content-start wrap_bottom_graph">
+              <div class="wrap_bottom_graph_left">
+                <h3>Account Balance</h3>
+                <span>KES 1,999,999.99</span>
+              </div>
+              <div class="wrap_bottom_graph_right">
+                <h3>Available amount to settle</h3>
+                <span>KES 398,009.42</span>
+              </div>
+            </div>
+          </div>
+          <div class="row m-t">
+            <div class="col-6">
+              <span>Last updated 5 minutes ago</span>
+            </div>
+            <div class="col-6">
+              <a href="#">See all settlements <span>&rarr;</span></a>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row help_row">
+    <div class="col-md-12">
+      <button mat-button>
+        <i class="far fa-comment-dots"></i> Need help?
+      </button>
+    </div>
+  </div>
+</div>
+
+
