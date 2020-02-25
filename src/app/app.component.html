@@ -20,7 +20,7 @@
         <mat-list>
           <mat-list-item>
             <a href="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-check _m-r"></i>
               Activate
             </a>
           </mat-list-item>
@@ -37,13 +37,13 @@
         <mat-list>
           <mat-list-item>
             <a href="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-shopping-cart _m-r"></i>
               Transactions
             </a>
           </mat-list-item>
           <mat-list-item>
             <a routerLink="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-dollar-sign _m-r"></i>
              Settlement
             </a>
           </mat-list-item>
@@ -55,31 +55,31 @@
         <mat-list>
           <mat-list-item>
             <a href="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-file-invoice-dollar _m-r"></i>
               Payment Settings
             </a>
           </mat-list-item>
           <mat-list-item>
             <a routerLink="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-shopping-cart _m-r"></i>
              Create Payment
             </a>
           </mat-list-item>
           <mat-list-item>
             <a routerLink="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-share-alt _m-r"></i>
               Payment Links
             </a>
           </mat-list-item>
           <mat-list-item>
             <a routerLink="/bulk-payment" (click)="link_fn()" [class.hovered_a]="state">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-cart-plus _m-r"></i>
               Bulk Payments
             </a>
           </mat-list-item>
           <mat-list-item>
             <a routerLink="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-qrcode _m-r"></i>
               My Devices
             </a>
           </mat-list-item>
@@ -91,25 +91,25 @@
         <mat-list>
           <mat-list-item>
             <a href="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-fire _m-r"></i>
               Monitoring
             </a>
           </mat-list-item>
           <mat-list-item>
             <a routerLink="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-sliders-h _m-r"></i>
               API Keys
             </a>
           </mat-list-item>
           <mat-list-item>
             <a routerLink="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-calendar-day _m-r"></i>
               Events
             </a>
           </mat-list-item>
           <mat-list-item>
             <a routerLink="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="far fa-clock _m-r"></i>
               Logs
             </a>
           </mat-list-item>
@@ -120,7 +120,7 @@
         <mat-list>
           <mat-list-item>
             <a href="/">
-              <i class="far fa-chart-bar _m-r"></i>
+              <i class="fas fa-cog _m-r"></i>
               Settings
             </a>
           </mat-list-item>
@@ -134,17 +134,30 @@
       <span class="space"></span>
       <!--        <span flex></span>-->
       <span class="fill"></span>
-      <span>SandBox</span>
-      <span>Documentation</span>
+        <div class="custom-select">
+          <i class="fas fa-circle" style="color: #f5a623"></i>
+          <select>
+            <option value="0">Sandbox</option>
+            <option value="1">Test APIs</option>
+          </select>
+        </div>
+      <span class="fd">Documentation</span>
       <span class="_wrap_icon">
           <mat-icon fontSet="far" fontIcon="fa-question-circle"></mat-icon>
           <mat-icon fontSet="far" fontIcon="fa-bell"></mat-icon>
-            <mat-icon fontSet="far" fontIcon="fa-user"></mat-icon>
+          <mat-icon fontSet="far" fontIcon="fa-user"></mat-icon>
         </span>
     </mat-toolbar>
 <!--    <div class="main-content">-->
 <!--      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
 <!--    </div>-->
     <router-outlet></router-outlet>
+    <div class="row help_row">
+      <div class="col-md-12">
+        <button mat-button>
+          <i class="far fa-comment-dots"></i> Need help?
+        </button>
+      </div>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

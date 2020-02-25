@@ -88,8 +88,8 @@
         <div class="row">
           <div class="col-md-7 _top_card_left">
             <a mat-button>Today</a>
-            <a mat-button class="btn_active">Last 7 days</a>
-            <a mat-button>Last 30 days</a>
+            <a mat-button >Last 7 days</a>
+            <a mat-button class="btn_active">Last 30 days</a>
             <a mat-button>Last 90 days</a>
             <a mat-button>Custom</a>
           </div>
@@ -120,14 +120,22 @@
             </div>
             <div class="col-md-12">
               <div class="chart-container">
-                <canvas baseChart
-                        [datasets]="lineChartData"
-                        [labels]="lineChartLabels"
-                        [options]="lineChartOptions"
-                        [colors]="lineChartColors"
-                        [legend]="lineChartLegend"
-                        [chartType]="lineChartType"
-                        [plugins]="lineChartPlugins"></canvas>
+                <ngx-charts-bar-vertical-2d
+                  [view]="view"
+                  [scheme]="colorScheme"
+                  [results]="multi"
+                  [gradient]="gradient"
+                  [xAxis]="showXAxis"
+                  [yAxis]="showYAxis"
+                  [legend]="showLegend"
+                  [showXAxisLabel]="showXAxisLabel"
+                  [showYAxisLabel]="showYAxisLabel"
+                  [xAxisLabel]="xAxisLabel"
+                  [yAxisLabel]="yAxisLabel"
+                  [barPadding]="barPadding"
+                  [groupPadding]="groupPadding"
+                  [legendTitle]="legendTitle">
+                </ngx-charts-bar-vertical-2d>
               </div>
             </div>
           </div>
@@ -155,13 +163,13 @@
       </mat-card>
     </div>
   </div>
-  <div class="row help_row">
-    <div class="col-md-12">
-      <button mat-button>
-        <i class="far fa-comment-dots"></i> Need help?
-      </button>
-    </div>
-  </div>
+<!--  <div class="row help_row">-->
+<!--    <div class="col-md-12">-->
+<!--      <button mat-button>-->
+<!--        <i class="far fa-comment-dots"></i> Need help?-->
+<!--      </button>-->
+<!--    </div>-->
+<!--  </div>-->
 </div>
 
 

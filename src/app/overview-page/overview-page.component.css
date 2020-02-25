@@ -4,6 +4,9 @@
   /*position: relative;*/
   /*left: 15px;*/
 }
+.ngx-charts .grid-panel.odd rect {
+  background-color: red;
+}
 h2 {
   margin: 15px 0 15px 0px;
   color: rgba(0, 0, 0, 0.6);

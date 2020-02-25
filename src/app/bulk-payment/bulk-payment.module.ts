@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {BulkPaymentComponent} from './bulk-payment.component';
 import {BulkPaymentRoutingModule} from './bulk-payment-routing.module';
 import {AppMaterialModule} from '../app-material/app-material.module';
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 
@@ -13,7 +14,8 @@ import {AppMaterialModule} from '../app-material/app-material.module';
   imports: [
     CommonModule,
     BulkPaymentRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    NgxPaginationModule
   ]
 })
 export class BulkPaymentModule { }

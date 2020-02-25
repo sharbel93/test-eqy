@@ -5,7 +5,7 @@ import {OverviewRoutingModule} from './overview-routing.module';
 import {AppMaterialModule} from '../app-material/app-material.module';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
-
+import {NgxChartsModule} from "@swimlane/ngx-charts";
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { ChartsModule } from 'ng2-charts';
     OverviewRoutingModule,
     AppMaterialModule,
     ReactiveFormsModule,
-    ChartsModule
+    ChartsModule,
+    NgxChartsModule
   ]
 })
 export class OverviewModule { }

@@ -1,3 +1,78 @@
-<mat-grid-list cols="1" rowHeight="1:0.5">
-  <mat-grid-tile>1</mat-grid-tile>
-</mat-grid-list>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row _top_row">
+        <div class="col-md-12">
+          <p><i class="fas fa-exclamation-circle"></i> You are in Sandbox mode. <strong>Activate your account</strong> to start making live transactions and accept real payments!</p>
+        </div>
+      </div>
+      <mat-card class="analytics_card">
+        <!--  <mat-card-header>-->
+        <div class="row">
+          <div class="col-md-7 _top_card_left">
+            <a mat-button class="btn_active">All</a>
+            <a mat-button>Today</a>
+            <a mat-button>Last 30 days</a>
+            <a mat-button>Last 90 days</a>
+            <a mat-button>Custom</a>
+          </div>
+          <div class="col-md-5 ">
+            <div class="_wrap_side">
+              <a mat-button class="_btn_download">Download sample file</a>
+              <a mat-button class="_btn_upload">Upload file</a>
+            </div>
+          </div>
+        </div>
+        <!--  </mat-card-header>-->
+        <mat-card-content>
+          <div class="row _top_table">
+            <div class="col-md-6">
+              <form class="form_">
+                <input type="text" placeholder="Search by batch ID or filename" name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <button mat-button> Clear</button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <a href="#">Documentation <span>&rarr;</span></a>
+            </div>
+          </div>
+          <div class="row _wrap_grap">
+            <div class="col-md-12">
+              <table id="customers">
+                <tr>
+                  <th>Batch Id</th>
+                  <th>File Name</th>
+                  <th>Payment Plan</th>
+                  <th>Upload Date</th>
+                  <th>Payees</th>
+                  <th>Action</th>
+                </tr>
+                <tr *ngFor="let pay of Payments | paginate: { itemsPerPage: pageSize, currentPage: page }">
+                  <td style="color: #603b80; font-weight: 500">{{pay.batch_id}}</td>
+                  <td>{{pay.filename}}</td>
+                  <td>{{pay.payment_plan}}</td>
+                  <td>{{pay.upload_date}}</td>
+                  <td>{{pay.payees}}</td>
+                  <td><a href="{{pay.Action}}" mat-button> <mat-icon>vertical_align_bottom</mat-icon> Download</a> </td>
+                </tr>
+
+              </table>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <pagination-controls
+              (pageChange)="page = $event"
+              directionLinks="true"
+              responsive="true"
+              class="my_pagination"
+              nextLabel=""
+              previousLabel=""
+            >
+            </pagination-controls>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
